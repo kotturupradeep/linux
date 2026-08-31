@@ -1,0 +1,131 @@
+=================================================
+          LINUX SPECIAL PERMISSIONS
+=================================================
+
+TYPES
+-----
+
+1. SUID       → 4
+2. SGID       → 2
+3. Sticky Bit → 1
+
+
+=================================================
+SUID (SET USER ID)
+=================================================
+
+Numeric Value → 4
+
+Used Mainly   → Executable files
+
+Purpose:
+When executed, the program runs with
+the effective permissions of the file owner.
+
+SET:
+chmod 4755 filename
+chmod u+s filename
+
+REMOVE:
+chmod u-s filename
+
+DISPLAY:
+rwsr-xr-x → Execute + SUID
+rwSr-xr-x → SUID without Execute
+
+
+=================================================
+SGID (SET GROUP ID)
+=================================================
+
+Numeric Value → 2
+
+FILE:
+Program runs with effective group
+permissions of file group owner.
+
+DIRECTORY:
+New files/directories inherit the
+group ownership of parent directory.
+
+SET:
+chmod 2755 filename
+chmod g+s filename
+
+REMOVE:
+chmod g-s filename
+
+DISPLAY:
+rwxr-sr-x → Execute + SGID
+rwxr-Sr-x → SGID without Execute
+
+
+=================================================
+STICKY BIT
+=================================================
+
+Numeric Value → 1
+
+Used Mainly → Directories
+
+Purpose:
+Users cannot delete other users'
+files in a shared directory.
+
+SET:
+chmod 1755 directory
+chmod 1777 directory
+chmod +t directory
+
+REMOVE:
+chmod -t directory
+
+DISPLAY:
+rwxrwxrwt → Execute + Sticky Bit
+rwxrwxrwT → Sticky Bit without Execute
+
+Example:
+/tmp
+
+
+=================================================
+NUMERIC EXAMPLES
+=================================================
+
+4755 → SUID + rwxr-xr-x
+2755 → SGID + rwxr-xr-x
+1755 → Sticky + rwxr-xr-x
+
+6755 → SUID + SGID + rwxr-xr-x
+3755 → SGID + Sticky + rwxr-xr-x
+7755 → SUID + SGID + Sticky + rwxr-xr-x
+
+
+=================================================
+SPECIAL PERMISSION POSITIONS
+=================================================
+
+rws rwx rwx
+  ↑
+SUID
+
+rwx rws rwx
+      ↑
+     SGID
+
+rwx rwx rwt
+          ↑
+      Sticky Bit
+
+
+=================================================
+SMALL vs CAPITAL
+=================================================
+
+s → Special permission + Execute
+S → Special permission without Execute
+
+t → Sticky Bit + Execute
+T → Sticky Bit without Execute
+
+=================================================

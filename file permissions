@@ -1,0 +1,127 @@
+====================================================
+            LINUX FILE PERMISSIONS
+====================================================
+
+CHECK PERMISSIONS
+-----------------
+ls -l                  Long listing
+ll                     Long listing
+
+FILE TYPES
+----------
+-                      Regular file
+d                      Directory
+l                      Symbolic link
+
+PERMISSION CLASSES
+------------------
+u                      User/Owner
+g                      Group
+o                      Others
+a                      All
+
+PERMISSION VALUES
+-----------------
+r = 4                  Read
+w = 2                  Write
+x = 1                  Execute
+
+PERMISSION COMBINATIONS
+-----------------------
+--- = 0
+--x = 1
+-w- = 2
+-wx = 3
+r-- = 4
+r-x = 5
+rw- = 6
+rwx = 7
+
+FILE PERMISSIONS
+----------------
+r                      Read content
+w                      Modify content
+x                      Execute file
+
+DIRECTORY PERMISSIONS
+---------------------
+r                      List contents
+w                      Create/Delete files
+x                      Enter directory (cd)
+
+CHANGE PERMISSION
+-----------------
+chmod 755 file
+chmod 644 file
+chmod 777 file
+
+SYMBOLIC METHOD
+---------------
+chmod u+r file         Add read to user
+chmod g+w file         Add write to group
+chmod o+x file         Add execute to others
+
+chmod u-r file         Remove read from user
+chmod g-w file         Remove write from group
+
+chmod u=rwx file       Set exact permission
+chmod a=rwx file       Set permission for all
+
+COMMON PERMISSIONS
+------------------
+777                    rwxrwxrwx
+755                    rwxr-xr-x
+750                    rwxr-x---
+744                    rwxr--r--
+700                    rwx------
+666                    rw-rw-rw-
+644                    rw-r--r--
+600                    rw-------
+
+UMASK
+-----
+umask                  Check umask
+umask 022              Set umask
+
+Maximum File Permission      = 666
+Maximum Directory Permission = 777
+
+DEFAULT PERMISSION
+------------------
+Maximum Permission - UMASK
+
+umask 022
+File:       666 - 022 = 644
+Directory:  777 - 022 = 755
+
+umask 002
+File:       666 - 002 = 664
+Directory:  777 - 002 = 775
+
+OWNERSHIP
+---------
+chown user file
+                       Change owner
+
+chown user:group file
+                       Change owner and group
+
+chown :group file
+                       Change group
+
+chown -R user:group dir
+                       Recursive ownership
+
+chgrp group file
+                       Change group
+
+chgrp -R group dir
+                       Recursive group change
+====================================================
+ls -l
+chmod 755 file
+chmod u+x file
+umask
+chown user:group file
+chown -R user:group directory
+chgrp group file.

@@ -1,0 +1,105 @@
+==============================
+     FILE CREATION
+==============================
+
+cat > file          Create file with content
+touch file          Create empty file
+touch file{1..4}    Create multiple files
+touch .file         Create hidden file
+
+==============================
+     OPEN EDITOR
+==============================
+
+vi file             Open VI editor
+vim file            Open VIM editor
+nano file           Open Nano editor
+
+==============================
+     INSERT MODE
+==============================
+
+i                   Insert before cursor
+I                   Insert beginning of line
+a                   Insert after cursor
+A                   Insert end of line
+o                   New line below
+O                   New line above
+Esc                 Command mode
+
+==============================
+     MOVEMENT
+==============================
+
+h                   Left
+j                   Down
+k                   Up
+l                   Right
+gg                  Beginning of file
+G                   End of file
+:25                 Go to line 25
+
+==============================
+     COPY / PASTE
+==============================
+
+yy                  Copy line
+3yy                 Copy 3 lines
+p                   Paste below
+P                   Paste above
+
+==============================
+     DELETE
+==============================
+
+dd                  Delete line
+3dd                 Delete 3 lines
+:5d                 Delete line 5
+:$d                 Delete last line
+:3,6d               Delete lines 3 to 6
+
+==============================
+     SEARCH
+==============================
+
+/word               Search forward
+?word               Search backward
+n                   Next result
+N                   Previous result
+
+==============================
+     UNDO / REDO
+==============================
+
+u                   Undo
+Ctrl+r              Redo
+
+==============================
+     SAVE / QUIT
+==============================
+
+:w                  Save
+:q                  Quit
+:q!                 Force quit
+:wq                 Save and quit
+:x                  Save and quit
+ZZ                  Save and quit
+
+==============================
+     LINE NUMBERS
+==============================
+
+:set nu             Show line numbers
+:set nonu           Hide line numbers
+
+==============================
+     FIND & REPLACE
+==============================
+
+:%s/old/new/g       Replace all words
+
+==============================
+     VIM ENCRYPTION
+==============================
+
+:X                  Encrypt file

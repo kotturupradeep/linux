@@ -1,0 +1,164 @@
+Advanced Linux Interview Questions — 2–3 Year Level
+Linux Troubleshooting
+How do you troubleshoot a slow Linux server?
+CPU utilization is 100%. How do you identify the root cause?
+Memory utilization is 95%. How do you troubleshoot it?
+What will you check if the server load average is very high?
+How do you identify the process consuming the most CPU?
+How do you identify the process consuming the most memory?
+What is the difference between top, vmstat, iostat, and sar?
+How do you troubleshoot high disk I/O?
+How do you troubleshoot a server that becomes unresponsive?
+What checks do you perform before restarting a production server?
+Process Management
+What are the different Linux process states?
+What is a zombie process?
+What is an orphan process?
+What is the difference between SIGTERM and SIGKILL?
+How do you find the parent process of a process?
+How do you find how long a process has been running?
+What are nice and renice?
+How do you change the priority of a running process?
+What is the /proc filesystem?
+How do you troubleshoot a process stuck in D state?
+Systemd
+What is systemd?
+What is the difference between systemctl start and systemctl enable?
+How do you troubleshoot a service that is not starting?
+How do you check service logs using journalctl?
+What is a systemd unit?
+What are systemd targets?
+How do you create a custom systemd service?
+What is the purpose of After= and Requires=?
+How do you configure automatic service restart?
+How do you troubleshoot a service that fails after reboot?
+Storage & LVM
+What is LVM and why is it used?
+Explain PV, VG, and LV.
+How do you create an LVM partition?
+How do you extend an LVM filesystem?
+What is the difference between XFS and EXT4?
+How do you extend an XFS filesystem?
+How do you extend an EXT4 filesystem?
+How do you reduce an LVM filesystem?
+What is /etc/fstab?
+What happens if /etc/fstab contains an incorrect entry?
+How do you troubleshoot a filesystem that is not mounting?
+What is the difference between df -h and du -sh?
+Why can df show more disk usage than du?
+How do you find deleted files that are still consuming disk space?
+What are inodes?
+How do you troubleshoot inode exhaustion?
+What is RAID?
+What is the difference between RAID 0, RAID 1, RAID 5, and RAID 10?
+How do you identify newly attached disks?
+How do you troubleshoot high disk utilization?
+Networking
+How do you check the IP address in Linux?
+How do you check the routing table?
+How do you add a static route?
+What is a default gateway?
+How do you troubleshoot connectivity between two servers?
+How do you check whether a port is listening?
+How do you check which process is using a particular port?
+What is the difference between TCP and UDP?
+What is the TCP three-way handshake?
+What are common TCP connection states?
+How do you troubleshoot a port that is not reachable?
+How do you troubleshoot packet loss?
+How do you use tcpdump for troubleshooting?
+What is ARP?
+How do you check ARP information?
+What is CIDR?
+How do you calculate a subnet?
+What is the difference between public and private IP addresses?
+How do you troubleshoot network connectivity when ping is disabled?
+How do you check network interface errors?
+DNS
+What is DNS?
+How does DNS resolution work?
+What is the difference between A, AAAA, CNAME, MX, and PTR records?
+How do you troubleshoot DNS resolution?
+What is /etc/resolv.conf?
+What is /etc/hosts?
+What is the difference between /etc/hosts and DNS?
+How do you perform a reverse DNS lookup?
+How do you check which DNS server is being used?
+How do you troubleshoot intermittent DNS resolution?
+SSH
+How does SSH authentication work?
+How do you configure passwordless SSH?
+What is authorized_keys?
+What is known_hosts?
+SSH is not working. How do you troubleshoot it?
+How do you troubleshoot SSH permission-denied errors?
+What permissions should .ssh and authorized_keys have?
+How do you change the default SSH port?
+How do you disable root SSH login?
+How do you troubleshoot SSH connection timeout?
+Users & Permissions
+Explain Linux file permissions.
+What are SUID, SGID, and Sticky Bit?
+What is ACL?
+How do you configure ACL permissions?
+What is umask?
+How do you lock and unlock a user account?
+How do you check password expiry information?
+What is the difference between /etc/passwd and /etc/shadow?
+How do you give a user sudo access?
+How do you troubleshoot a permission-denied issue?
+SELinux & Security
+What is SELinux?
+What are SELinux enforcing, permissive, and disabled modes?
+How do you check the SELinux status?
+What is an SELinux context?
+What is the difference between chcon and restorecon?
+How do you troubleshoot SELinux-related access problems?
+What is semanage?
+How do you check SELinux denial logs?
+What is firewalld?
+How do you open and close a port using firewalld?
+Logs & Monitoring
+Where are Linux system logs stored?
+What is journalctl?
+How do you check logs for a specific service?
+How do you check logs for a specific time period?
+What is logrotate?
+How do you configure log rotation?
+How do you monitor CPU, memory, disk, and network usage?
+What is the difference between monitoring and alerting?
+How do you troubleshoot an application using logs?
+How do you identify the root cause from system logs?
+Bash Scripting
+How do you write a Bash script to check CPU usage?
+How do you write a script to check memory usage?
+How do you write a disk-space alert script?
+How do you check whether a service is running using a script?
+What is $? in Bash?
+What are $0, $1, $2, and $#?
+What is the difference between $@ and $*?
+How do you use if, for, and while loops?
+How do you handle errors in Bash scripts?
+How do you schedule a Bash script using cron?
+Web & Application Servers
+How do you troubleshoot Apache not starting?
+How do you troubleshoot Nginx configuration errors?
+How do you check which application is listening on port 80 or 443?
+What is a reverse proxy?
+What is the difference between Apache and Nginx?
+How do you troubleshoot an application that is running but not accessible?
+How do you check application logs?
+How do you configure SSL/TLS for a web server?
+How do you troubleshoot an SSL certificate issue?
+How do you troubleshoot HTTP 502 and 503 errors?
+NFS & Samba
+What is NFS?
+How do you configure an NFS server?
+How do you configure an NFS client?
+What is /etc/exports?
+How do you troubleshoot an NFS mount failure?
+What is Samba?
+What is SMB?
+How do you configure a Samba share?
+How do you troubleshoot Samba permission issues?
+What is the difference between NFS and Samba?
